@@ -5,6 +5,7 @@
     "main": "main.js",
     "scripts": {
         "private": "npx grunt private",
+        "private:watch": "npx grunt watch",
         "remote": "npx grunt remote"
     },
     "author": "",
@@ -20,6 +21,7 @@
         "grunt-contrib-clean": "^2.0.0",
         "grunt-contrib-copy": "^1.0.0",
         "grunt-contrib-uglify": "^4.0.1",
+        "grunt-contrib-watch": "^1.1.0",
         "grunt-file-append": "0.0.7",
         "grunt-jsbeautifier": "^0.2.13",
         "grunt-rsync": "^3.0.0",

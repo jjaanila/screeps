@@ -1,14 +1,11 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "lib": [
-            "esnext",
-            "DOM"
-        ],
+        "lib": ["esnext", "DOM"],
         "target": "es2017",
         "moduleResolution": "node",
         "outDir": "./dist/",
-        "rootDir": "./src",
+        "rootDir": "./src/",
         "baseUrl": "./src/",
         "sourceMap": true,
         "strict": true,
@@ -17,7 +14,5 @@
         "allowSyntheticDefaultImports": true,
         "allowUnreachableCode": false
     },
-    "exclude": [
-        "node_modules"
-    ]
+    "exclude": ["node_modules"]
 }
