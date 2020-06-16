@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from "lodash";
 
 declare global {
     // Example global constant for libraries served via webpack externals. example webpack config:: externals: { _: 'lodash' }
