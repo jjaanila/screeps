@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "lib": ["esnext", "DOM"],
-        "target": "es2017",
+        "target": "es5",
         "moduleResolution": "node",
         "outDir": "./dist/",
         "rootDir": "./src/",

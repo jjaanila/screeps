@@ -4,29 +4,22 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-        "private": "npx grunt private",
-        "private:watch": "npx grunt watch",
-        "remote": "npx grunt remote"
+        "private": "npx webpack && rsync -rv ./dist/ /mnt/c/Users/JJ/AppData/Local/Screeps/scripts/127_0_0_1___21025/default",
+        "private:watch": "npx webpack",
+        "remote": "npx webpack && echo 'Does nothing yet...'"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "grunt-ts": "^6.0.0-beta.22"
+        "webpack-node-externals": "^1.7.2"
     },
     "devDependencies": {
         "@types/lodash": "^4.14.155",
         "@types/node": "^14.0.13",
         "@types/screeps": "^3.1.2",
-        "grunt": "^1.1.0",
-        "grunt-contrib-clean": "^2.0.0",
-        "grunt-contrib-copy": "^1.0.0",
-        "grunt-contrib-uglify": "^4.0.1",
-        "grunt-contrib-watch": "^1.1.0",
-        "grunt-file-append": "0.0.7",
-        "grunt-jsbeautifier": "^0.2.13",
-        "grunt-rsync": "^3.0.0",
-        "grunt-screeps": "^1.4.0",
-        "time-grunt": "^2.0.0",
-        "typescript": "^3.9.5"
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.5",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12"
     }
 }

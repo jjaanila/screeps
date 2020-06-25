@@ -1,6 +1,6 @@
-import builderRole from "./role.builder";
-import harvesterRole from "./role.harvester";
-import upgraderRole from "./role.upgrader";
+import builderRole from "./roles/builder";
+import harvesterRole from "./roles/harvester";
+import upgraderRole from "./roles/upgrader";
 
 function canSpawn(spawn: StructureSpawn) {
     const returnCode = spawn.spawnCreep([], "dummy", { dryRun: true });
