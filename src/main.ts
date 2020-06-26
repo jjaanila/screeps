@@ -7,7 +7,6 @@ const roles = [builderRole, harvesterRole, upgraderRole];
 
 module.exports.loop = () => {
     spawner.run();
-    console.log("loop");
     for (let creepName in Game.creeps) {
         for (let role of roles) {
             if (Game.creeps[creepName].memory.role === role.TYPE) {

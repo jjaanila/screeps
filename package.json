@@ -4,22 +4,22 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-        "private": "npx webpack && rsync -rv ./dist/ /mnt/c/Users/JJ/AppData/Local/Screeps/scripts/127_0_0_1___21025/default",
-        "private:watch": "npx webpack",
+        "private": "npx webpack",
+        "private:watch": "npx webpack --watch",
         "remote": "npx webpack && echo 'Does nothing yet...'"
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {
-        "webpack-node-externals": "^1.7.2"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/lodash": "^4.14.155",
         "@types/node": "^14.0.13",
         "@types/screeps": "^3.1.2",
+        "copy-webpack-plugin": "^6.0.2",
         "ts-loader": "^7.0.5",
         "typescript": "^3.9.5",
         "webpack": "^4.43.0",
-        "webpack-cli": "^3.3.12"
+        "webpack-cli": "^3.3.12",
+        "webpack-node-externals": "^1.7.2"
     }
 }
