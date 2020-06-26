@@ -6,7 +6,8 @@ type CreepRole = "harvester" | "builder" | "upgrader";
 interface CreepMemory {
     role: CreepRole;
     isWorking: boolean;
-    isGathering: boolean;
+    isHarvesting: boolean;
+    harvestTargetSource?: Source;
 }
 
 interface Memory {
