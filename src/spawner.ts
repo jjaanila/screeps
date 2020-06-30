@@ -14,7 +14,7 @@ function spawn(spawn: StructureSpawn, body: BodyPartConstant[], role: CreepRole)
     if (canSpawn(spawn)) {
         return;
     }
-    var name = role + Game.time;
+    const name = role + Game.time;
     console.log(`Spawning ${name}`);
     spawn.spawnCreep(body, name, { memory: { role, isWorking: false } });
 }

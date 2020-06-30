@@ -11,8 +11,7 @@
         "experimentalDecorators": true,
         "noImplicitReturns": true,
         "allowSyntheticDefaultImports": true,
-        "allowUnreachableCode": false,
-        "allowUmdGlobalAccess": true
+        "allowUnreachableCode": false
     },
     "exclude": ["node_modules"]
 }

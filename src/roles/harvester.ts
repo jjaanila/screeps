@@ -5,7 +5,7 @@ export default {
         if (shouldHarvest(creep)) {
             harvest(creep);
         } else {
-            var targets = creep.room.find(FIND_STRUCTURES, {
+            const targets = creep.room.find(FIND_STRUCTURES, {
                 filter: (structure) => {
                     return (
                         (structure.structureType == STRUCTURE_EXTENSION ||
