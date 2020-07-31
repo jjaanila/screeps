@@ -1,4 +1,4 @@
-import { shouldHarvest, harvest } from "./creep";
+import { shouldHarvest, harvest, moveCreepToReserve } from "./creep";
 
 export default {
     run: (creep: Creep) => {
@@ -19,6 +19,8 @@ export default {
                 if (creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(targets[0], { visualizePathStyle: { stroke: "#ffffff" } });
                 }
+            } else {
+                moveCreepToReserve(creep);
             }
         }
     },

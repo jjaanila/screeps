@@ -1,3 +1,5 @@
+const CREEP_RESERVE_FLAG_NAME = "CreepReserve";
+
 function getNewSourceToHarvest(creep: Creep): Source {
     let sources = creep.room.find(FIND_SOURCES_ACTIVE);
     if (creep.memory.harvestTargetSourceId) {
@@ -29,5 +31,15 @@ export function harvest(creep: Creep) {
             break;
         default:
             break;
+    }
+}
+
+export function moveCreepToReserve(creep: Creep) {
+    const creepReserveFlag = creep.room.find(FIND_FLAGS).find((flag) => flag.name == CREEP_RESERVE_FLAG_NAME);
+    if (creepReserveFlag) {
+        switch (creep.moveTo(creepReserveFlag.pos)) {
+            default:
+                break;
+        }
     }
 }
