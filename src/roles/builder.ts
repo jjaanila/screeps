@@ -1,7 +1,7 @@
 import { harvest, shouldHarvest } from "./creep";
 
 function getNewConstructionSiteToBuild(creep: Creep): ConstructionSite | undefined {
-    let constructionSites = creep.room.find(FIND_MY_CONSTRUCTION_SITES);
+    let constructionSites = _.sortBy(creep.room.find(FIND_MY_CONSTRUCTION_SITES), "id"); // Sorting focuses all builders to one site at a time.
     if (creep.memory.buildTargetConstructionSiteId) {
         // Let's not accept the old source
         constructionSites = constructionSites.filter(
@@ -11,7 +11,7 @@ function getNewConstructionSiteToBuild(creep: Creep): ConstructionSite | undefin
     if (!constructionSites.length) {
         return;
     }
-    return constructionSites[Math.floor(Math.random() * constructionSites.length)];
+    return constructionSites[0];
 }
 
 function build(creep: Creep) {
